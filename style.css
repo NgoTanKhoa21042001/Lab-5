@@ -1,0 +1,290 @@
+/* Reset css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+    
+    html {
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    
+    /* Common : class dùng chung */
+    
+    .clear{
+        clear: both;
+    }
+    
+    .text-white{
+        color: #fff !important;
+    }
+    
+    .text-center{
+        text-align: center!important;
+    }
+    .mt-8{
+        margin-top: 8px !important;
+    }
+    
+    .mt-16{
+        margin-top: 16px !important;
+    }
+    .row{
+        margin-left: -16px;    /*Vì ông -8px này liến quan đến row ; hàng */
+        margin-right: -16px;  
+    }
+    
+    .row::after{    /*Vif class clear owr dưới nên dùng after. Từ giờ ko cần dùng class clear nữa. Lớp giả này thay thế như thẻ div thật */
+        content: "";
+        display: block;
+        clear: both;
+    }
+    
+    .col{        /*Tách cái float left ra column */
+        float: left;
+        padding-left: 8px;  
+        padding-right: 8px;  /*Mình xét cái place item */
+    }
+    
+    .col-half{
+        width: 50%;   /*phần contact 2 cột mỗi cột chia  50% */
+    }
+    
+    .col-full{
+        width: 100%;
+    }
+    
+    .col-third{
+        width: 33.33333%;
+    }
+    
+    
+    #main {
+        
+    }
+    
+    #header {
+        background-color: black;
+        height: 46px;
+        position: fixed;
+        width: 100%;
+        line-height: 1.5;
+        top: 0;
+        z-index: 1;   /* nổi lên phần header */
+    }
+    
+    
+    #nav {
+        display: inline-block;  /* Để cái chiều ngang tới đúng chổ thẻ li thôi , ko chiếm hết */
+    }
+    
+    #nav li {
+        display: inline-block;
+        position: relative;
+    }
+    #nav li a {
+        padding: 0 24px;
+        font-size: 15px;
+        text-decoration: none;
+        display: inline-block;
+        line-height: 46px;    /*Căn giữa chiều cao*/
+    }
+    
+    #nav li:hover .subnav{
+        display: block;
+    }
+    #nav > li > a {
+        text-transform: uppercase;
+        color:#fff;
+    }
+    .subnav li:hover a , 
+    #nav > li:hover > a {
+        background-color: #ccc;
+        color: black;
+    }
+    
+    #nav .subnav {
+        top: 100%;
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    }
+    
+    #nav .subnav a {
+        color: black;
+        width: 100%; 
+        padding: 0 12px;
+        line-height: 38px;   /*cho viền trắng dài hơn*/
+    }
+    
+    .subnav li {
+        width: 100%;
+    }
+    
+    #header .search-btn {
+        float: right;
+        padding: 0 16px;
+        cursor: pointer;
+    }
+    
+    #header .search-btn:hover{
+        background-color: red;
+        
+    }
+    
+    #header .search-icon {
+        color: white;
+       line-height: 46px;
+       font-size: 15px;
+       padding-left: 8px;
+    }
+    
+     #slider{ 
+        width: 100%;
+        text-align: center;
+        color: #999999	;
+        padding-top: 50%;
+        margin-top: 46px;
+        position: relative;
+        background: url('./banhang/giay-tu-cot-day-cua-nike\ \(1\).jpg') top center / cover no-repeat;
+    }
+    
+    #slider .text-content {
+        color: #F5F5F5;
+        position: absolute; 
+        font-weight: 900;
+        bottom: 60px;
+        width: 100%;  /* cách # ở dưới*/
+       /* right: 0
+          left : 0 */
+        /* left: 50%;
+        transform: translateX(-50%); */
+    }
+    
+    #slider .text-heading {
+        margin: 10px 0;
+    }
+    
+    #slider .text-decription {
+        font-size: 15px;
+        font-weight: bolder;
+        margin-top: 25px;
+    }
+
+    #content .content-section{
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 64px 0 94px;
+        line-height: 1.5;    /* Cho nó cách ra giữa dòng với dòng, khỏi dính khó đọc*/
+    }
+
+    #content .section-heading{
+        font-size: 30px;
+        text-align: center;
+        letter-spacing: 4px; /* Tăng khoảng cách giữa chữ*/
+        font-weight: 400;
+        margin: 10px 0;
+        font-family: "Segoe UI",Arial,sans-serif
+    }
+    #content .section-sub-heading{
+        text-align: center;
+        margin-top: 25px;
+        opacity: 0.4;   /* Độ mờ của chữ*/
+        font-style: italic;  /* In nghiêng*/
+    }
+    #content .about-text{
+        color: #000;
+        font-size: 15px;
+        margin-top: 25px;
+        text-align: justify;  /* cho 2 bên mép bằng, ngang nhau*/
+    }
+
+    #content .members-list {
+        padding-top: 48px;
+    }
+    #content .member-name{
+        font-size: 15px;
+    }
+    
+    #content .member-img{
+        width: 90%;  
+        border-radius: 4px;  /* Viền Hình ảnh nó bo tròn*/
+        margin-top: 15px;
+    }
+    .contact-content{
+        margin-top: 48px;
+        line-height: 1.6;
+     }
+     
+     .contact-info{
+         font-size: 18px;
+     }
+     
+     .contact-info i[class*="fa"] {
+         width: 30px;
+         display: inline-block;  /* khoảng cách icon và chữ*/
+     }
+     
+     .contact-form{
+         font-size: 15px;
+     }
+     
+     .contact-form .form-control{
+         padding: 10px;
+         border: 1px solid #ccc;
+         width: 100%;
+     }
+     
+     .form-submit{
+         padding: 8px 16px;
+         background-color: black;
+         color: #fff;
+         float: right;
+         cursor: pointer;
+         border: none;
+         font-size: 15px;
+         width: 71px;
+         height: 38px;
+         margin-bottom: 16px;
+     }
+     
+     .form-submit:hover{
+         background-color: #ccc;
+         color: #000;
+     }
+
+     .google-map {
+        display: flex;
+     }
+
+    .map {
+        margin: auto;
+    }
+    
+    #footer {
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+
+    .social-list {
+        font-size: 18px;
+        color: black;
+        opacity: .8;
+    }
+    .copy-rights {
+        font-size: 15px;
+        padding-top: 10px;
+        font-weight: 500;
+    }
+
+    .copy-rights a {
+        
+        color: rgba(0, 0, 0, .6);
+    }
+    
+    .copy-rights a:hover {
+        color: rgba(0, 0, 0, .3);
+    }
